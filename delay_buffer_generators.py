@@ -178,9 +178,9 @@ class HMMProcess:
         return HMMProcess((next_tx, delayed_name), self.eps, inv_mem_states)
 
 
-def make_delay_chain(eps_tx, delay_length: int, verbose:bool = False):
+def make_delay_chain(input_process, delay_length: int, verbose:bool = False):
     output = np.zeros(delay_length + 1)
-    the_epsilon = eps_tx
+    the_epsilon = input_process
     process = the_epsilon
     for i in range(delay_length + 1):
         if i != 0:
@@ -192,7 +192,5 @@ def make_delay_chain(eps_tx, delay_length: int, verbose:bool = False):
         output[i] = process.generative_dissipation()
     return output
 
-
-# %% Defines a few example processes
 
 

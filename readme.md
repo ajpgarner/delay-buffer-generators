@@ -8,8 +8,8 @@ a given specification of the process's epsilon machine.
 and some example processes. `HMMProcess` reflects a Hidden
 Markov Model of a process. It should be constructed by
 supplying a tensor description of its epsilon-machine 
-transitions (for details, see comments in `delay_buffer_generators.py`, or the examples in
-`make_delay_chains.py`).
+transitions (for details, see comments in `delay_buffer_generators.py`, 
+or the examples in `make_delay_chains.py`).
 
 `HMMProcess` has several member functions, the most important being
 `delay_by_one()`, which creates a new model producing
@@ -21,6 +21,11 @@ The class also has a ``__str__`` overload, such that
 "``print(model)``" outputs a human-readable description
 of the model's memory and transition structure.
 
+Finally, `make_delay_chain(process, length)`, takes a  `HMMProcess`
+"process" and number indicating the maximum delay buffer length. It 
+then returns an array, where index `i` indicates the generative 
+dissipation associated with a delay of `i` (index `0` indicates the
+epsilon-machine dissipation). 
 
 ### `make_delay_chains.py`
 `make_delay_chains.py` calculates the dissipation for the
