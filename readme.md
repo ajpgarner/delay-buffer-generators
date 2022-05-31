@@ -44,5 +44,5 @@ If you use this script or a derivative thereof in academic
 research, I kindly ask that you consider citing the paper 
 for which this script was originally developed:
 
-*Exact citation to be determined.*
+A. J. P. Garner, Chaos 31, 063131 (2021); https://doi.org/10.1063/5.0044741
 
